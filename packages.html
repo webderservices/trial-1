@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Webder | Packages</title>
   <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Explore Webder’s pricing tiers and find the right package for your business.">
+  <meta name="description" content="Explore Webder's website design packages for businesses. Choose from three levels of custom web design." />
+  <script>
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.classList.toggle('fade', window.scrollY > 150);
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -18,100 +24,64 @@
   </header>
 
   <main>
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1>Website Packages</h1>
-        <p>From startups to seasoned brands, we’ve built tailored packages for every stage of your business journey.</p>
-      </div>
+    <section class="section">
+      <h1>Our Packages</h1>
+      <p class="about">
+        Whether you're starting out or scaling up, we have a package designed for your needs. All packages include professional design, responsive layout, and modern performance — tailored to your brand.
+      </p>
     </section>
 
-    <section class="packages-overview">
-      <div class="intro-text">
-        <h2>Built for Your Business</h2>
-        <p>Each of our packages includes responsive design, fast load speeds, and mobile-first development. Choose your level of functionality and design complexity below.</p>
+    <section class="section services-container">
+      <!-- Basic Package -->
+      <div class="service-card">
+        <h3>Starter Site</h3>
+        <p><strong>$75</strong> — Sleek One-Page Website</p>
+        <ul style="text-align: left; margin-top: 15px;">
+          <li>✓ Clean, responsive single-page design</li>
+          <li>✓ Mobile-optimized layout</li>
+          <li>✓ Contact form integration</li>
+          <li>✓ Social media links</li>
+          <li>✓ 3-5 content sections</li>
+        </ul>
       </div>
 
-      <div class="package-grid">
-        <!-- Starter Package -->
-        <div class="package-card starter">
-          <h3>Starter</h3>
-          <p class="price">$75</p>
-          <p class="tagline">Sleek. Simple. Effective.</p>
-          <ul>
-            <li>✔ One-page website</li>
-            <li>✔ Mobile-friendly layout</li>
-            <li>✔ Custom color scheme</li>
-            <li>✔ Contact button or form</li>
-            <li>✔ Delivered within 3–5 days</li>
-            <li>✔ One revision included</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Get Started</a>
-        </div>
-
-        <!-- Professional Package -->
-        <div class="package-card professional highlight">
-          <h3>Professional</h3>
-          <p class="price">$120</p>
-          <p class="tagline">More pages, more power.</p>
-          <ul>
-            <li>✔ Multi-page website (up to 5 pages)</li>
-            <li>✔ Clean and modern layouts</li>
-            <li>✔ Contact + quote request forms</li>
-            <li>✔ Scroll animations and transitions</li>
-            <li>✔ Basic SEO optimization</li>
-            <li>✔ Two rounds of revisions</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Select Plan</a>
-        </div>
-
-        <!-- Ultimate Package -->
-        <div class="package-card ultimate">
-          <h3>Ultimate</h3>
-          <p class="price">$150</p>
-          <p class="tagline">Fully customized, fully impressive.</p>
-          <ul>
-            <li>✔ All Professional features</li>
-            <li>✔ Parallax effects & advanced animations</li>
-            <li>✔ Custom icons & visuals</li>
-            <li>✔ Blog or gallery integration</li>
-            <li>✔ Newsletter sign-up integration</li>
-            <li>✔ 30 days post-launch support</li>
-          </ul>
-          <a href="contact.html" class="btn-primary">Upgrade Now</a>
-        </div>
+      <!-- Standard Package -->
+      <div class="service-card">
+        <h3>Business Pro</h3>
+        <p><strong>$120</strong> — Multi-Page Website</p>
+        <ul style="text-align: left; margin-top: 15px;">
+          <li>✓ Everything in Starter</li>
+          <li>✓ Up to 5 custom pages</li>
+          <li>✓ Enhanced visuals and animations</li>
+          <li>✓ SEO-friendly markup</li>
+          <li>✓ Project delivery within 5 days</li>
+        </ul>
       </div>
-    </section>
 
-    <section class="faq-section">
-      <h2>Common Questions</h2>
-      <div class="faq-item">
-        <h4>Which package is right for me?</h4>
-        <p>If you're starting out or just need a clean online presence, Starter is perfect. Need multiple pages? Go with Professional. Want all the bells and whistles? Ultimate is your best bet.</p>
-      </div>
-      <div class="faq-item">
-        <h4>How does payment work?</h4>
-        <p>Once we finalize your request, you’ll receive a secure invoice. Work begins after confirmation and initial payment.</p>
-      </div>
-      <div class="faq-item">
-        <h4>What if I need something custom?</h4>
-        <p>No problem! Reach out through our <a href="contact.html">contact form</a> and we’ll provide a custom quote tailored to your needs.</p>
+      <!-- Premium Package -->
+      <div class="service-card">
+        <h3>Elite Web Presence</h3>
+        <p><strong>$150</strong> — Fully Upgraded Site</p>
+        <ul style="text-align: left; margin-top: 15px;">
+          <li>✓ Everything in Business Pro</li>
+          <li>✓ Blog or gallery setup</li>
+          <li>✓ Advanced animations</li>
+          <li>✓ Optional dark mode</li>
+          <li>✓ Priority delivery + revisions</li>
+        </ul>
       </div>
     </section>
 
     <section class="cta-banner">
-      <div class="cta-text">
-        <h2>Need Help Choosing?</h2>
-        <p>We’re happy to walk you through your options. Contact us for a free consultation.</p>
-        <a href="contact.html" class="btn-secondary">Talk to Us</a>
-      </div>
+      <h2>Not Sure What to Pick?</h2>
+      <p>We’re happy to guide you! Share your goals with us, and we’ll help you pick the perfect package — or build a custom one.</p>
+      <a href="contact.html">Let’s Talk</a>
     </section>
   </main>
 
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Webder. All rights reserved.</p>
-      <p>📍 San Diego, CA | ✉️ <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a></p>
-    </div>
+    <p>&copy; 2025 Webder. All rights reserved.</p>
+    <p>Email: <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a> | Based in San Diego</p>
   </footer>
 </body>
 </html>
