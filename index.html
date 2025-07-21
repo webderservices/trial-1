@@ -2,99 +2,129 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Webder | Bespoke Web Design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Webder | Bespoke Websites Crafted for Visionaries</title>
   <link rel="stylesheet" href="styles.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pV0zG9l3R3ZdNvJIXQ1Gz3yU+Z6AQ9QJ+eF1B1WrbWDgZamRZFcZsmPkZjS8CqN3z+SZcy7uZcKJX8MGCZBk9A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script>
+    // Smooth scroll active link highlight
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll("nav a");
+      links.forEach(link => {
+        link.addEventListener("click", e => {
+          links.forEach(l => l.classList.remove("active"));
+          e.target.classList.add("active");
+        });
+      });
+    });
+  </script>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1 class="logo">Webder</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="packages.html">Packages</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+    <h1>Webder</h1>
+    <nav>
+      <a href="index.html" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="packages.html"><i class="fas fa-box-open"></i> Packages</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+    </nav>
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h2>Websites That Work For You</h2>
-        <p>Webder builds modern, responsive, and user-friendly websites that help your business grow and stand out.</p>
-        <a href="packages.html" class="btn">View Packages</a>
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Modern Websites<br />Tailored for Growth</h2>
+        <p>
+          At <strong>Webder</strong>, we craft sleek, high-performance websites designed to elevate your business presence online.
+          From startups to established companies, our custom solutions help you stand out and convert visitors into loyal customers.
+        </p>
+        <a href="packages.html" class="btn-primary" aria-label="View our packages">Explore Our Packages <i class="fas fa-arrow-right"></i></a>
       </div>
-    </div>
-  </section>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
+          alt="Creative workspace with laptops and code on screens"
+          loading="lazy"
+        />
+      </div>
+    </section>
 
-  <section class="features">
-    <div class="container">
-      <h2>Why Choose Webder?</h2>
-      <div class="feature-grid">
-        <div class="feature-box">
+    <section class="about" id="about">
+      <h2>About Webder</h2>
+      <p>
+        Based in sunny San Diego, Webder is dedicated to delivering websites that are not just visually stunning but optimized for speed and user experience.
+        Our team blends creativity and technical expertise to build sites that perform flawlessly on all devices.
+      </p>
+      <p>
+        We pride ourselves on attention to detail, transparent communication, and a client-first approach that ensures your website truly reflects your brand’s story.
+      </p>
+    </section>
+
+    <section class="features" aria-label="Webder Features">
+      <h2>Why Choose Us?</h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <i class="fas fa-rocket fa-3x feature-icon"></i>
+          <h3>Fast Delivery</h3>
+          <p>Efficient workflows and clear timelines mean your website launches quickly without sacrificing quality.</p>
+        </article>
+        <article class="feature-card">
+          <i class="fas fa-paint-brush fa-3x feature-icon"></i>
           <h3>Custom Designs</h3>
-          <p>No templates here. Each site is designed specifically for your business’s goals and brand identity.</p>
-        </div>
-        <div class="feature-box">
-          <h3>Responsive Layouts</h3>
-          <p>Looks perfect on phones, tablets, laptops, and desktops. Seamless performance across devices.</p>
-        </div>
-        <div class="feature-box">
-          <h3>Fast Turnaround</h3>
-          <p>We value your time. Expect timely delivery and responsive communication throughout your project.</p>
-        </div>
-        <div class="feature-box">
-          <h3>SEO Optimized</h3>
-          <p>All our websites are built with SEO fundamentals in mind to help boost your online visibility.</p>
-        </div>
-        <div class="feature-box">
-          <h3>Clean Code</h3>
-          <p>Behind the scenes, our code is organized, modern, and performance-oriented.</p>
-        </div>
-        <div class="feature-box">
-          <h3>Based in San Diego</h3>
-          <p>Proudly serving businesses locally and beyond with premium web design and care.</p>
-        </div>
+          <p>Every site is handcrafted with your brand's unique identity and goals in mind — no cookie-cutter templates.</p>
+        </article>
+        <article class="feature-card">
+          <i class="fas fa-mobile-alt fa-3x feature-icon"></i>
+          <h3>Mobile-First</h3>
+          <p>Responsive designs that look and work beautifully on phones, tablets, and desktops alike.</p>
+        </article>
+        <article class="feature-card">
+          <i class="fas fa-headset fa-3x feature-icon"></i>
+          <h3>Ongoing Support</h3>
+          <p>We provide friendly, ongoing support to keep your website running smoothly as your business grows.</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="cta">
-    <div class="container">
-      <h2>Let’s Build Something Together</h2>
-      <p>Whether you're a small business or a growing brand, we have a solution for your web presence. Get started today!</p>
-      <a href="contact.html" class="btn">Contact Us</a>
-    </div>
-  </section>
+    <section class="testimonial" aria-label="Customer testimonial">
+      <h2>What Our Clients Say</h2>
+      <blockquote>
+        <p>
+          “Webder transformed our online presence! The process was smooth, and the team was incredibly responsive. Our new site looks amazing and drives more traffic than ever.”
+        </p>
+        <footer>- Alex T., Founder of TechStart</footer>
+      </blockquote>
+    </section>
 
-  <section class="testimonials">
-    <div class="container">
-      <h2>Client Love</h2>
-      <div class="testimonial-grid">
-        <div class="testimonial">
-          <p>"Webder transformed my small business. The site looks fantastic and my customers love it!"</p>
-          <span>- Jamie P., Retail Owner</span>
-        </div>
-        <div class="testimonial">
-          <p>"The entire process was smooth and professional. Highly recommend their $150 package!"</p>
-          <span>- Carlos M., Restaurant Owner</span>
-        </div>
-        <div class="testimonial">
-          <p>"I appreciated the quick response times and quality service. The site works great on mobile!"</p>
-          <span>- Dana L., Consultant</span>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="cta" aria-label="Call to action">
+      <h2>Ready to Build Your Website?</h2>
+      <p>
+        Whether you need a sleek one-pager or a full multi-page site, Webder has the perfect package to get your business online and thriving.
+      </p>
+      <a href="contact.html" class="btn-secondary" aria-label="Contact Webder">Contact Us Today <i class="fas fa-paper-plane"></i></a>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Webder | Designed in San Diego</p>
-      <p>Contact us at <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a></p>
-    </div>
+    <p>© 2025 Webder | Based in San Diego | <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a></p>
   </footer>
+
+  <script>
+    // Animate elements on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('section').forEach(section => observer.observe(section));
+  </script>
 </body>
 </html>
