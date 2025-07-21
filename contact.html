@@ -3,84 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact Us | Webder</title>
+  <title>Webder | Contact Us</title>
   <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Get in touch with Webder for bespoke website design and professional digital services." />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll("nav a");
+      links.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "contact.html") {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 </head>
 <body>
   <header>
-    <div class="logo">Webder</div>
+    <h1>Webder</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="packages.html">Packages</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="packages.html"><i class="fas fa-box-open"></i> Packages</a>
+      <a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
   </header>
 
   <main>
-    <!-- Contact Intro -->
-    <section class="contact-intro">
-      <h1>Get in Touch</h1>
-      <p>Have questions? Ready to start your project? We’re here to help you bring your vision to life.</p>
+    <section class="page-intro">
+      <h2>Get In Touch With Us</h2>
+      <p>
+        Whether you’re ready to start your project or just have questions, we’re here to help. Reach out to Webder today!
+      </p>
     </section>
 
-    <!-- Contact Form + Info -->
-    <section class="contact-main">
-      <form class="contact-form" action="mailto:webderservices@gmail.com" method="POST" enctype="text/plain" novalidate>
-        <h2>Send Us a Message</h2>
-        <label for="name">Full Name <span>*</span></label>
-        <input type="text" id="name" name="Name" placeholder="Your full name" required />
+    <section class="contact-info" aria-label="Contact Information">
+      <h3>Contact Details</h3>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> Based in San Diego, CA</li>
+        <li><i class="fas fa-envelope"></i> Email: <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a></li>
+        <li><i class="fas fa-phone"></i> Phone: (442) 359-7553</li>
+      </ul>
+    </section>
 
-        <label for="email">Email Address <span>*</span></label>
-        <input type="email" id="email" name="Email" placeholder="you@example.com" required />
+    <section class="contact-form-section" aria-label="Contact Form">
+      <h3>Send Us a Message</h3>
+      <form id="contactForm" action="#" method="POST" novalidate>
+        <label for="name">Full Name <span aria-hidden="true">*</span></label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+          required
+          minlength="3"
+          aria-describedby="nameHelp"
+        />
+        <small id="nameHelp" class="form-help">Please enter your full name.</small>
 
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="Phone" placeholder="Optional" pattern="[0-9\-+\s()]*" />
+        <label for="email">Email Address <span aria-hidden="true">*</span></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+          aria-describedby="emailHelp"
+        />
+        <small id="emailHelp" class="form-help">We'll never share your email.</small>
 
-        <label for="message">Message <span>*</span></label>
-        <textarea id="message" name="Message" rows="6" placeholder="Tell us about your project or questions" required></textarea>
+        <label for="package">Interested Package</label>
+        <select id="package" name="package" aria-describedby="packageHelp">
+          <option value="" selected disabled>Select a package</option>
+          <option value="starter">Starter - $75</option>
+          <option value="business">Business Suite - $120</option>
+          <option value="signature">Signature Web Presence - $150</option>
+        </select>
+        <small id="packageHelp" class="form-help">Choose if you have a package in mind.</small>
 
-        <button type="submit" class="btn-primary">Send Message</button>
+        <label for="message">Your Message <span aria-hidden="true">*</span></label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Tell us about your project or questions..."
+          required
+          minlength="10"
+          aria-describedby="messageHelp"
+        ></textarea>
+        <small id="messageHelp" class="form-help">Feel free to provide details.</small>
+
+        <button type="submit" class="btn-primary" aria-label="Submit Contact Form">Send Message <i class="fas fa-paper-plane"></i></button>
       </form>
-
-      <aside class="contact-info">
-        <h2>Contact Details</h2>
-        <p><strong>Email:</strong> <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+4423597553">442-359-7553</a></p>
-        <p><strong>Location:</strong> San Diego, California</p>
-        <p>We typically respond within 24 hours on business days.</p>
-
-        <div class="social-media">
-          <h3>Follow Us</h3>
-          <a href="#" aria-label="Facebook" class="social-icon fb" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="#" aria-label="Twitter" class="social-icon tw" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="#" aria-label="LinkedIn" class="social-icon li" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
-      </aside>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section">
-      <h2>Find Us</h2>
-      <p>Located in the heart of San Diego, we're ready to collaborate with you in person or remotely.</p>
-      <iframe
-        title="Webder San Diego Location"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.059223953245!2d-117.16108308478209!3d32.71573808098153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530bb1d92617%3A0x9872760b0ef497b0!2sSan%20Diego%2C%20CA!5e0!3m2!1sen!2sus!4v1688300000000!5m2!1sen!2sus"
-        width="100%"
-        height="320"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+    <section class="map-section" aria-label="Location Map">
+      <h3>Find Us in San Diego</h3>
+      <div class="map-container" aria-hidden="true">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.515996008536!2d-117.16108418441866!3d32.715738280983754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9530a7e9a28d5%3A0xf0e36b2ebfbc063d!2sSan%20Diego%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1690023456678!5m2!1sen!2s"
+          width="100%"
+          height="300"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="San Diego Location"
+        ></iframe>
+      </div>
     </section>
   </main>
 
   <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 Webder. All rights reserved.</p>
-      <p>📍 San Diego, CA | ✉️ <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a></p>
-    </div>
+    <p>© 2025 Webder | Based in San Diego | <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a></p>
   </footer>
+
+  <script>
+    // Scroll fade effect on header
+    window.addEventListener("scroll", () => {
+      const header = document.querySelector("header");
+      header.classList.toggle("fade", window.scrollY > 150);
+    });
+
+    // Simple client-side form validation & feedback (for demo purposes)
+    const form = document.getElementById("contactForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const message = form.message.value.trim();
+
+      if(name.length < 3) {
+        alert("Please enter a valid name (at least 3 characters).");
+        form.name.focus();
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if(!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        form.email.focus();
+        return;
+      }
+
+      if(message.length < 10) {
+        alert("Please enter a message with at least 10 characters.");
+        form.message.focus();
+        return;
+      }
+
+      alert("Thanks for reaching out! We'll get back to you shortly.");
+      form.reset();
+    });
+  </script>
 </body>
 </html>
