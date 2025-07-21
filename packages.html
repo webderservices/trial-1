@@ -2,86 +2,156 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Webder | Packages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Webder | Packages & Pricing</title>
   <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Explore Webder's website design packages for businesses. Choose from three levels of custom web design." />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <script>
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      header.classList.toggle('fade', window.scrollY > 150);
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll("nav a");
+      links.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "packages.html") {
+          link.classList.add("active");
+        }
+      });
     });
   </script>
 </head>
 <body>
   <header>
-    <div class="logo">Webder</div>
+    <h1>Webder</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="packages.html" class="active">Packages</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="packages.html" class="active"><i class="fas fa-box-open"></i> Packages</a>
+      <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
   </header>
 
   <main>
-    <section class="section">
-      <h1>Our Packages</h1>
-      <p class="about">
-        Whether you're starting out or scaling up, we have a package designed for your needs. All packages include professional design, responsive layout, and modern performance — tailored to your brand.
+    <section class="page-intro">
+      <h2>Choose Your Perfect Website Package</h2>
+      <p>
+        Whether you’re launching your first site or scaling up, Webder has a package tailored to your needs.
+        Explore our offerings below and find the perfect fit for your business.
       </p>
     </section>
 
-    <section class="section services-container">
-      <!-- Basic Package -->
-      <div class="service-card">
-        <h3>Starter Site</h3>
-        <p><strong>$75</strong> — Sleek One-Page Website</p>
-        <ul style="text-align: left; margin-top: 15px;">
-          <li>✓ Clean, responsive single-page design</li>
-          <li>✓ Mobile-optimized layout</li>
-          <li>✓ Contact form integration</li>
-          <li>✓ Social media links</li>
-          <li>✓ 3-5 content sections</li>
-        </ul>
-      </div>
+    <section class="packages-container" aria-label="Website Packages">
 
-      <!-- Standard Package -->
-      <div class="service-card">
-        <h3>Business Pro</h3>
-        <p><strong>$120</strong> — Multi-Page Website</p>
-        <ul style="text-align: left; margin-top: 15px;">
-          <li>✓ Everything in Starter</li>
-          <li>✓ Up to 5 custom pages</li>
-          <li>✓ Enhanced visuals and animations</li>
-          <li>✓ SEO-friendly markup</li>
-          <li>✓ Project delivery within 5 days</li>
+      <article class="package-card" tabindex="0">
+        <header>
+          <h3>Starter Package</h3>
+          <p class="price">$75</p>
+        </header>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Sleek, One-Page Website</li>
+          <li><i class="fas fa-check-circle"></i> Responsive Design for All Devices</li>
+          <li><i class="fas fa-check-circle"></i> Basic SEO Setup</li>
+          <li><i class="fas fa-check-circle"></i> Fast Loading Times</li>
+          <li><i class="fas fa-check-circle"></i> 1 Revision Included</li>
         </ul>
-      </div>
+        <p class="package-desc">
+          Perfect for startups or small businesses looking to establish a professional online presence quickly and affordably.
+        </p>
+        <button class="btn-primary" aria-label="Select Starter Package">Select Package</button>
+      </article>
 
-      <!-- Premium Package -->
-      <div class="service-card">
-        <h3>Elite Web Presence</h3>
-        <p><strong>$150</strong> — Fully Upgraded Site</p>
-        <ul style="text-align: left; margin-top: 15px;">
-          <li>✓ Everything in Business Pro</li>
-          <li>✓ Blog or gallery setup</li>
-          <li>✓ Advanced animations</li>
-          <li>✓ Optional dark mode</li>
-          <li>✓ Priority delivery + revisions</li>
+      <article class="package-card" tabindex="0">
+        <header>
+          <h3>Business Suite</h3>
+          <p class="price">$120</p>
+        </header>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Multi-Page Website (5-7 pages)</li>
+          <li><i class="fas fa-check-circle"></i> Enhanced Responsive Design</li>
+          <li><i class="fas fa-check-circle"></i> SEO Optimization & Analytics</li>
+          <li><i class="fas fa-check-circle"></i> Interactive Elements & Animations</li>
+          <li><i class="fas fa-check-circle"></i> Up to 3 Revisions</li>
         </ul>
-      </div>
+        <p class="package-desc">
+          A step up for growing businesses needing more content, engagement, and a polished professional look.
+        </p>
+        <button class="btn-primary" aria-label="Select Business Suite Package">Select Package</button>
+      </article>
+
+      <article class="package-card" tabindex="0">
+        <header>
+          <h3>Signature Web Presence</h3>
+          <p class="price">$150</p>
+        </header>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Full Multi-Page Website (8+ pages)</li>
+          <li><i class="fas fa-check-circle"></i> Custom Animations & Transitions</li>
+          <li><i class="fas fa-check-circle"></i> Blog Setup & CMS Integration</li>
+          <li><i class="fas fa-check-circle"></i> Priority Support & Maintenance</li>
+          <li><i class="fas fa-check-circle"></i> Up to 6 Revisions</li>
+        </ul>
+        <p class="package-desc">
+          For businesses ready to invest in a comprehensive, high-impact online presence with ongoing support.
+        </p>
+        <button class="btn-primary" aria-label="Select Signature Web Presence Package">Select Package</button>
+      </article>
+
     </section>
 
-    <section class="cta-banner">
-      <h2>Not Sure What to Pick?</h2>
-      <p>We’re happy to guide you! Share your goals with us, and we’ll help you pick the perfect package — or build a custom one.</p>
-      <a href="contact.html">Let’s Talk</a>
+    <section class="faq" aria-label="Frequently Asked Questions">
+      <h2>Frequently Asked Questions</h2>
+      <details>
+        <summary>How long does it take to complete a website?</summary>
+        <p>
+          Our timeline varies based on package complexity but generally ranges from 1-3 weeks.
+          We provide regular updates and work closely with you to meet deadlines.
+        </p>
+      </details>
+      <details>
+        <summary>Can I update the website myself after delivery?</summary>
+        <p>
+          Yes! We offer CMS integration with most packages so you can easily manage content without technical knowledge.
+          Training is also available.
+        </p>
+      </details>
+      <details>
+        <summary>Do you offer hosting and domain registration?</summary>
+        <p>
+          While we don’t directly provide hosting or domains, we can guide you through choosing reliable services and help with setup.
+        </p>
+      </details>
+      <details>
+        <summary>What if I need custom features?</summary>
+        <p>
+          Custom requests are welcome! Contact us for a personalized quote beyond standard packages.
+        </p>
+      </details>
+    </section>
+
+    <section class="cta" aria-label="Call to action">
+      <h2>Have Questions or Ready to Start?</h2>
+      <p>Contact us today to discuss your project and get a personalized quote!</p>
+      <a href="contact.html" class="btn-secondary" aria-label="Contact Webder">Get in Touch <i class="fas fa-paper-plane"></i></a>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Webder. All rights reserved.</p>
-    <p>Email: <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a> | Based in San Diego</p>
+    <p>© 2025 Webder | Based in San Diego | <a href="mailto:webderservices@gmail.com">webderservices@gmail.com</a></p>
   </footer>
+
+  <script>
+    // Animate on scroll for sections
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('section, details').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
